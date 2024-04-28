@@ -7,7 +7,7 @@ React.Component {
         return (
             <div className="SearchResults">
                 <h2>Search Results</h2>
-                <TrackList />
+                <TrackList tracks={this.props.tracks} />
             </div>
         );
     }

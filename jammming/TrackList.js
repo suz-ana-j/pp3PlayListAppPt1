@@ -6,8 +6,15 @@ React.Component {
     render() {
         return (
             <div className="TrackList">
-                {/* Map through tracks here and render Track components */}
-                <Track />
+                {this.props.tracks.map(track => (
+                    <Track
+                        key={track.id}
+                        name={track.name}
+                        artist={track.artist}
+                        album={track.album}
+                    />
+                ))}
+                
             </div>
         );
     }
