@@ -2,7 +2,7 @@
 Third Portfolio Project ᓚᘏᗢ
 
 ## Jammming
-I've build a React Web Application. This website allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account. 
+I've build a React Web Application called <span style="color:lavender;">*Jammming.*</span> This website allows users to search the <span style="color:green;">Spotify</span> library, create a custom playlist, then save it to their Spotify account. 
 
 ## Features
 * Users can search for songs by Song Title.
