@@ -1,0 +1,41 @@
+.TrackList {
+    margin-top: 20px;
+  }
+  
+  .Track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .Track h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .Track p {
+    margin: 0;
+    font-size: 14px;
+    color: #888888;
+  }
+  
+  .Track-action {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .Track-action:hover {
+    color: #1db954; /* Green color similar to Spotify */
+  }
+  
+  .Track-action:active {
+    transform: translateY(1px);
+  }
