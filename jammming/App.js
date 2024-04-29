@@ -7,6 +7,22 @@ import PlayList from './components/PlayList';
 function App() {
     const [playlistName, setPlaylistName] = useState('My Playlist');
     const [playlistTracks, setPlaylistTracks] = useState([]);
+    const [playlists, setPlaylists] = useState([]);
+
+    const addPlaylist = 
+        (playlistName, tracks) => {
+            const newPlaylist = { name: playlistName, tracks: tracks };
+            setPlaylists([...playlists, newPlaylist]);
+        };
+
+    const removePlaylist = 
+    (playlistIndex) => {
+        const updatedPlaylists = [...playlists];
+
+        updatedPlaylists.splice(playlistIndex, 1);
+
+        setPlaylists(updatedPlaylists);
+    };
 
     // Mock data array of track objects
     const mockTracks = [
@@ -56,12 +72,16 @@ function App() {
                     onAdd={addTrack}
                 />
                 <PlayList 
-                    playlistName={playlistName}
+                    playlistName={playlists.name}
                     onNameChange={handlePlaylistNameChange}
-                    playlistTracks={playlistTracks}
-                    onRemove={removeTrack}
-                    onSave={savePlaylist}
+                    playlistTracks={playlists.tracks}
+                    onRemoveTrack={(trackIndex) => 
+                    removeTrack(index, trackIndex)}
+                    onRemovePlaylist={() => removePlaylist(index)}
+                    onAddTrack={(track) => addTrack(index, track)}
                 />
+                <button 
+            className="SaveAllButton" onClick={savePlaylist}>Save Playlist to Spotify</button>
             </div>
         </div>
     );
