@@ -1,4 +1,4 @@
-# pp3PlayListAppPt1
+# Create a Playlist App With the Spotify API
 Third Portfolio Project ᓚᘏᗢ
 
 ## Jammming
