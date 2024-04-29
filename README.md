@@ -31,7 +31,8 @@ I've build a React Web Application. This website allows users to search the Spot
 * Spotify Web API Endpoint reference
 * POST methods
 
-## Licensing
+## Copyright
+Copyright (c) 2024 suz-ana-j MIT License
 
 
 
