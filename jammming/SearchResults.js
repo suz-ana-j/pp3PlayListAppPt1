@@ -7,7 +7,11 @@ React.Component {
         return (
             <div className="SearchResults">
                 <h2>Search Results</h2>
-                <TrackList tracks={this.props.tracks} />
+                <TrackList 
+            tracks={this.props.tracks} 
+            onAdd={this.props.onAdd}
+                    isRemoval={false}
+                />
             </div>
         );
     }

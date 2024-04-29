@@ -12,6 +12,8 @@ React.Component {
                         name={track.name}
                         artist={track.artist}
                         album={track.album}
+                onAdd={this.props.onAdd}
+                isRemoval={this.props.isRemoval}
                     />
                 ))}
                 

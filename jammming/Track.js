@@ -8,7 +8,19 @@ React.Component {
                 
                 <h3>{this.props.name}</h3>
                 <p>{this.props.artist} | {this.props.album}</p>
-                <button className="Track-action">+</button>
+                {!this.props.isRemoval &&
+                (
+                    <button 
+                className="Track-action"
+                onClick={() => 
+                this.props.onAdd(this.props)}>+</button>
+                )
+                }
+                {this.props.isRemoval && 
+                (
+                    <button
+                className="Track-action">-</button>
+                )}
             </div>
         );
     }
