@@ -1,24 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import PlayList from './components/PlayList';
 
 function App() {
+    const [playlistName, setPlaylistName] = useState('My Playlist');
+    const [playlistTracks, setPlaylistTracks] = useState([]);
+
     // Mock data array of track objects
     const mockTracks = [
         {id: '1', name: 'Song 1', artist: 'Artist 1', album: 'Album 1'},
         {id: '2', name: 'Song 2', artist: 'Artist 2', album: 'Album 2'},
         {id: '3', name: 'Song 3', artist: 'Artist 3', album: 'Album 3'}
     ];
-    
+
+    // Function to handle changes in playlist title
+    const handlePlaylistNameChange = (event) => {
+        setPlaylistName(event.target.value);
+    };
+
+    // Function to add a track to the playlist
+    const addTrack = (track) => {
+        if (!playlistTracks.find(existingTrack => existingTrack.id === track.id)) {
+            setPlaylistTracks([...playlistTracks, track]);
+        }
+    };
+
+    // Function to remove a track from the playlist
+    const removeTrack = (track) => {
+        setPlaylistTracks(playlistTracks.filter(existingTrack => existingTrack.id !== track.id));
+    };
+
     return (
         <div className="App">
             <h1>Jammming</h1>
             <SearchBar />
             <div className="App.playlist">
-                <SearchResults />
-                <PlayList />
+                <SearchResults 
+                    tracks={mockTracks}
+                    onAdd={addTrack}
+                />
+                <PlayList 
+                    playlistName={playlistName}
+                    onNameChange={handlePlaylistNameChange}
+                    playlistTracks={playlistTracks}
+                    onRemove={removeTrack}
+                />
             </div>
         </div>
     );
