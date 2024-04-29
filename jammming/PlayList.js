@@ -40,10 +40,11 @@ React.Component {
             onClick={this.handleTitleClick}>{this.props.playlistName}</h2> )}
                 <TrackList 
             tracks={this.props.playlistTracks}
-            onRemove={this.props.onRemove}
-                        isRemoval={true}
+            onRemoveTrack={this.props.onRemoveTrack}
+                    
                 />
-                <button className="Playlist-save">Save to Spotify</button>
+                <button className="Playlist-save" onClick={onSave}>Save to Spotify</button>
+                <button className="Playlist-remove" onClick={onRemovePlaylist}>Remove Playlist</button>
             </div>
         );
     }
