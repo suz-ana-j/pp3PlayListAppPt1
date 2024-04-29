@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Set background color to black */
+  }
+  
+  h1 {
+    color: white; /* Set heading color to white */
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .App-playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .Playlist {
+    background-color: #1DB954; /* Set background color similar to Spotify */
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+  }
+  
+  button {
+    background-color: #191414; /* Set button background color to black */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1ED760; /* Change button background color on hover */
+  }
+  
+  .SearchButton {
+    width: calc(100% - 20px);
+  }
+  
+  .TrackList {
+    text-align: left;
+  }
+  
+  .Track {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Track h3 {
+    margin: 0;
+  }
+  
+  .Track p {
+    margin: 5px 0;
+  }
+  
+  .Track-action {
+    background-color: #1ED760;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Track-action:hover {
+    background-color: #1DB954;
+  }
+  
+  .Playlist-save {
+    background-color: #191414;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Playlist-save:hover {
+    background-color: #1ED760;
+  }
