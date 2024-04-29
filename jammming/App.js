@@ -32,6 +32,20 @@ function App() {
         setPlaylistTracks(playlistTracks.filter(existingTrack => existingTrack.id !== track.id));
     };
 
+    const resetPlaylist = () => {
+        setPlaylistName('My Playlist');
+            setPlaylistTracks([]);
+    };
+
+    const savePlaylist = () => {
+        const trackURIs = 
+    playlistTracks.map(track => track.uri);
+    // Send trackURIs to spotify API to save the playlist
+    console.log("Playlist saved:", trackURIs);
+    // reset playlist
+    resetPlaylist();
+    };
+
     return (
         <div className="App">
             <h1>Jammming</h1>
@@ -46,6 +60,7 @@ function App() {
                     onNameChange={handlePlaylistNameChange}
                     playlistTracks={playlistTracks}
                     onRemove={removeTrack}
+                    onSave={savePlaylist}
                 />
             </div>
         </div>
